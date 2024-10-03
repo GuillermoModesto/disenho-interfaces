@@ -1,0 +1,81 @@
+/* reseteo estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana,Tahoma, sans-serif;
+}
+
+.container{
+    border: 1px solid black;
+}
+
+.container__title, .container__subtitle{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container__subtitle{
+    border-bottom: 1px solid black;
+}
+
+.container__layout{
+    /*float: left;*/
+    display: flex;
+    /*flex-direction: row; lo aplica por defecto*/
+    flex-wrap: wrap; /*cuando el elemento no quepa, bájamelo*/
+    /*flex-flow: row wrap; equivalente a display flex + flex-wrap wrap*/
+    /*flex-flow: row-reverse wrap; es como cambiar de float left a float right*/
+    justify-content: space-around;
+    align-items: auto;
+    border: 2px solid green;
+    height: 300px;
+    width: 100%;
+}
+
+.layout__box{
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    width: 21.6%;
+    flex-grow: 1; /*hago que cada caja ocupe el máximo espacio que tenga disponible, con rpeferencia ascendente de 0 a infinito (?)*/
+    flex-basis: calc((100% /4)); /*una especie de width*/
+}
+
+.layout__box--red{
+    background-color: red;
+    /*order: 5;*/
+    align-self: center;
+}
+
+.layout__box--yellow{
+    background-color: yellow;
+    /*order: 1;*/
+}
+
+.layout__box--green{
+    background-color: green;
+    /*order: 4;*/
+}
+
+.layout__box--orange{
+    background-color: orange;
+    /*order: 3;*/
+}
+
+.layout__box--blue{
+    background-color: blue;
+    /*order: 4;*/
+}
+
+.layout__box--cyan{
+    background-color: cyan;
+    /*flex-grow: 8;*/
+    /*order: 2;*/
+}
