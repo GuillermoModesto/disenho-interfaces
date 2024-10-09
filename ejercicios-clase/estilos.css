@@ -76,23 +76,33 @@
 /* contenido */
 .content{
     /* Añadir aquí Flex y Align y/o justify */
-
-
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .content__projects{
     /* Añadir aquí Flex y Align y/o justify */
-
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
 }
 .projects__project{
     /* Añadir aquí Flex */
-
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 23%; */
+    flex-grow: 1;
+    flex-basis: 23.5%;
 
     margin-bottom: 25px;
     margin-right: 20px;
     border: 1px solid #ccc;
+    /* flex-grow: 1; */
 }
 .projects__project img{
     width: 100%;
@@ -125,7 +135,7 @@
 .content__lateral{
     /* Añadir aquí Flex */
 
-
+    flex-basis: 18%;
     margin-right: 30px;
     padding: 15px;
 }
