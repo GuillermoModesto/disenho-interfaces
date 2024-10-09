@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
-    /*list-style: none;*/
+    list-style: none;
 }
 .menu__list a{
     text-transform: uppercase;
