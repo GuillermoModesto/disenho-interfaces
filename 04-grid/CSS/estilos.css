@@ -1,0 +1,87 @@
+/* reseteo estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana,Tahoma, sans-serif;
+}
+
+.container{
+    border: 1px solid black;
+}
+
+.container__title, .container__subtitle{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container__subtitle{
+    border-bottom: 1px solid black;
+}
+
+.container__layout{
+    /*float: left;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*grid-gap: 10px;*/
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    /*grid-template-columns: calc(25% - 10px) calc(50% - 10px) calc(25% - 10px);*/
+    /*grid-template-columns: 1fr 500px 1fr;*/
+    /*grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+    grid-template-rows: 1fr 3fr 1fr 4fr;
+    height: 700px;
+}
+
+.layout__box{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.layout__box--red{
+    background-color: red;
+}
+
+.layout__box--yellow{
+    background-color: yellow;
+}
+
+.layout__box--green{
+    background-color: green;
+}
+
+.layout__box--orange{
+    background-color: orange;
+}
+
+.layout__box--blue{
+    background-color: blue;
+}
+
+.layout__box--cyan{
+    background-color: cyan;
+}
+
+.layout__box--black{
+    background-color: black;
+    color: white;
+}
+
+.layout__box--salmon{
+    background-color: salmon;
+}
+
+.layout__box--pink{
+    background-color: pink;
+    /*grid-column-start: 2;*/
+    /*grid-column-end: 4;*/
+    grid-column: 2 / 4;
+}
+
+.layout__box--yellow-green{
+    background-color: yellowgreen;
+    /* los grid-column-start y end cuentan los separadores de las columnas, no las columnas en si. por eso, si tenemos 3 columnas, el final será el 4 */
+    grid-column-start: 1;
+    grid-column-end: 5;
+}

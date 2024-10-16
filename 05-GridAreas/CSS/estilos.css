@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.website{
+    display: grid;
+    /* La cantidad de repeat y sus tamaños pueden intuirse según el % de tamaño que queremos en sus elementos. Aquí abajo, queremos que algunos elementos ocupen un 80%, y para eso
+    necesitariamos dividir la pagina en 5 partes/columnas (100/5 = 20; 5 columnas del 20%) */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 120px 70px 2fr 70px;
+
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "footer footer footer footer footer";
+
+        grid-column-gap: 10px;
+        width: 80%;
+        /* height: 100%; */
+        /* vh se refiere a la altura de nuestro navegador */
+        height: 100vh;
+}
