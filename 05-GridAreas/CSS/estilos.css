@@ -24,6 +24,66 @@ body{
         grid-column-gap: 10px;
         width: 80%;
         /* height: 100%; */
-        /* vh se refiere a la altura de nuestro navegador */
-        height: 100vh;
+        /* vh se refiere a la altura de nuestro navegador, es prácticamente lo mismo que el % */
+        /* No pasa a veces que ahcer que hacer un mini scroll en una página sin motivo? Pues para evitarlo, ponle el 95 y no el 100 */
+        height: 95vh;
+        margin: 0 auto;
+        border: 1px solid black;
+}
+
+.website__header{
+    grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: yellow;
+}
+
+.website__menu{
+    grid-area: menu;
+    /* line-height a la misma cantidad que el valor que le pusimos arriba en el grid-template-rows. Por qué? Mágia voodoo */
+    line-height: 70px;
+    background-color: yellow;
+    color: red;
+}
+
+.menu__list{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    list-style: none;
+    color: yellow;
+}
+
+.list__item a{
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.website__content{
+    grid-area: contenido;
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: red;
+    color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content__article{
+    display: flex;
+    /* Menos los 20px del margin, el paddin no modifica el tamaño de la caja si no de lo que hay dentro */
+    flex-basis: calc(100% / 4 - 20px);
+    border: 1px solid yellow;
+}
+
+.website__lateral{
+    grid-area: lateral;
+    background-color: blue;
+}
+
+.website__footer{
+    grid-area: footer;
+    background-color: blueviolet;
 }
